@@ -3,11 +3,11 @@ This repository matches my Ref folder, which contains the references for all my 
 
 #阅读方法
 1. 看introduction 回答问题1和2 
-2. 看图片 回答问题3A 
-3. 看结论和abstract 回答6A 
-4. 再看图片 回答3B和3C 
-5. 图片和结论相结合 回答6B和6C http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=369
-6. 阅读abstract和结果 回答问题4、5A和5C 
+2. 看图片 回答问题3.1 
+3. 看结论和abstract 回答6.1 
+4. 再看图片 回答3.2和3.3 
+5. 图片和结论相结合 回答6.2和6.3
+6. 阅读abstract和结果 回答问题4、5.1和5.3 
 7. 比较结果和结论 回答7 
 8. 比较以前的文献 回答6B和9 
 9. 比较同类文献 回答8 
@@ -30,15 +30,11 @@ This repository matches my Ref folder, which contains the references for all my 
 	
 3.图表
 
-	3.1	通过图表，你会得到什么结论？
+	3.a	通过图表，你会得到什么结论？
 	
-	3.2	图表说明什么问题？能否说明该问题  	
+	3.b	图表说明什么问题？能否说明该问题?自己要得到这张图会用什么方法？作者用的是什么方法？
 	
-	3.3	自己要得到这张图会用什么方法？
-	
-	3.4	作者用的是什么方法？
-	
-	3.5	你能够重新画出这张图，用自己的语言表达吗？
+	3.c	你能够重新画出这张图，用自己的语言表达吗？
 	
 4.方法分析
 	
