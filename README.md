@@ -6,7 +6,7 @@ This repository matches my Ref folder, which contains the references for all my 
 2. 看图片 回答问题3A 
 3. 看结论和abstract 回答6A 
 4. 再看图片 回答3B和3C 
-5. 图片和结论相结合 回答6B和6C 
+5. 图片和结论相结合 回答6B和6C http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=369
 6. 阅读abstract和结果 回答问题4、5A和5C 
 7. 比较结果和结论 回答7 
 8. 比较以前的文献 回答6B和9 
@@ -16,7 +16,7 @@ This repository matches my Ref folder, which contains the references for all my 
 
 ===
 
-1. 	论文主要解决的问题是什么？
+1.论文主要解决的问题是什么？
 
 	1.1	这个问题重要吗？为什么？
 	
@@ -26,7 +26,7 @@ This repository matches my Ref folder, which contains the references for all my 
 	
 	1.4	自己会怎么设计方法来解决？
 	
-2. 	图表	
+2.图表
 
 	2.1	通过图表，你会得到什么结论？
 	
@@ -50,15 +50,15 @@ This repository matches my Ref folder, which contains the references for all my 
 	
 	3.5	他为什么这样设计试验？是怎么想到的？有什么创新？你为什么没有想到？
 	
-4.
+4.逻辑
 
-	4.1	这些设计能否满足需要？为什么？这种方法有什么缺陷或进一步需要阐明的地方? 结 果分析统计方法有什么缺陷
+	4.1	这些设计能否满足需要？为什么？这种方法有什么缺陷或进一步需要阐明的地方? 结果分析统计方法有什么缺陷
 		
-	4.2	这些试验是如何组织起来的，之间的逻辑关系是什么？每项试验都有什么意义？哪些是 必要的？哪些是不必要的？ 
+	4.2	这些试验是如何组织起来的，之间的逻辑关系是什么？每项试验都有什么意义？哪些是必要的？哪些是不必要的？ 
 		
 	4.3	如果是我得到这样的结果，我会得到什么结论？
 	
-5.
+5.结论
 	
 	5.1	文章的结论是什么？和你想的差异在哪里?
 	
@@ -66,7 +66,7 @@ This repository matches my Ref folder, which contains the references for all my 
 	
 	5.3	讨论中是如何从已知的知识得到结论
 
-6.
+6.不足
 	
 	6.1	试验结果是否支持文章的结论 问题、设计、方法和讨论的逻辑关系是什么，作者是如何达到目的的？有哪些哲学思想和技巧？
 		
