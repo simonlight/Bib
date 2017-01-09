@@ -66,7 +66,7 @@ This repository matches my Ref folder, which contains the references for all my 
 	
 	5.3	讨论中是如何从已知的知识得到结论
 
-6.	
+6.
 	
 	6.1	试验结果是否支持文章的结论 问题、设计、方法和讨论的逻辑关系是什么，作者是如何达到目的的？有哪些哲学思想和技巧？
 		
