@@ -38,7 +38,7 @@ This repository matches my Ref folder, which contains the references for all my 
 	
 	2.5	你能够重新画出这张图，用自己的语言表达吗？
 	
-3.	方法分析
+3.方法分析
 	
 	3.1	作者采用什么方法来解决这个问题？假设是什么？理论依据是什么？
 	
@@ -50,7 +50,7 @@ This repository matches my Ref folder, which contains the references for all my 
 	
 	3.5	他为什么这样设计试验？是怎么想到的？有什么创新？你为什么没有想到？
 	
-4. 
+4.
 
 	4.1	这些设计能否满足需要？为什么？这种方法有什么缺陷或进一步需要阐明的地方? 结 果分析统计方法有什么缺陷
 		
