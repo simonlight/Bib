@@ -18,9 +18,9 @@ This repository matches my Ref folder, which contains the references for all my 
 
 1.论文主要解决的问题是什么？
 
-2.
+2.主要问题
 
-	2.1这个问题重要吗？为什么？
+	2.1	这个问题重要吗？为什么？
 	
 	2.2	我为什么要读这篇文献？ 
 	
