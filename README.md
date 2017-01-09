@@ -1,6 +1,21 @@
 # Bib
 This repository matches my Ref folder, which contains the references for all my paper works. I explain every reference by answering these problems:
 
+#阅读方法
+1. 看introduction 回答问题1和2 
+2. 看图片 回答问题3A 
+3. 看结论和abstract 回答6A 
+4. 再看图片 回答3B和3C 
+5. 图片和结论相结合 回答6B和6C 
+6. 阅读abstract和结果 回答问题4、5A和5C 
+7. 比较结果和结论 回答7 
+8. 比较以前的文献 回答6B和9 
+9. 比较同类文献 回答8 
+10. 回答7B和10 
+11. 最后全部问题过一遍
+
+===
+
 1. 	论文主要解决的问题是什么？
 
 	1.1	这个问题重要吗？为什么？
@@ -64,20 +79,6 @@ This repository matches my Ref folder, which contains the references for all my 
 8.	和以前的文献，作者思路上有什么变化，下一步是什么？我能否有进一步改进或者加入？
 
 9.	别人还有哪些地方没做？要是我接着此方向继续做，哪些是在我所在工作条件下可以做的，哪些必须要做，哪些别人肯定比我做得更好更快？
-
-===
-#阅读方法
-1. 看introduction 回答问题1和2 
-2. 看图片 回答问题3A 
-3. 看结论和abstract 回答6A 
-4. 再看图片 回答3B和3C 
-5. 图片和结论相结合 回答6B和6C 
-6. 阅读abstract和结果 回答问题4、5A和5C 
-7. 比较结果和结论 回答7 
-8. 比较以前的文献 回答6B和9 
-9. 比较同类文献 回答8 
-10. 回答7B和10 
-11. 最后全部问题过一遍
 
 ===
 Source: http://www.read.org.cn/html/1865-jiao-ni-zen-yue-du-wai-wen-wen-xian.html
