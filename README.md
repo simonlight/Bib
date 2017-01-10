@@ -31,7 +31,7 @@ This repository matches my Ref folder, which contains the references for all my 
 3.图表
 
 	3.A	通过图表，你会得到什么结论？
-	
+
 	3.B	图表说明什么问题？能否说明该问题?自己要得到这张图会用什么方法？作者用的是什么方法？
 	
 	3.C	你能够重新画出这张图，用自己的语言表达吗？

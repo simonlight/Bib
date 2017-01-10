@@ -1,3 +1,33 @@
+#Training object class detectors from eye tracking data
+###Dim P. Papadopoulos, Alasdair D. F. Clarke, Frank Keller, Vittorio Ferrari
+####ECCV2014
+
+
+
+#Improving Saliency Models by Predicting Human Fixation Patches
+###Rachit Dubey, Akshat Dave, and Bernard Ghanem1
+####ACCV2014 (14:15-14:23 不重要的文章大约10分钟)
+1.论文主要解决的问题是什么？
+	A major challenge for current visual saliency models is predicting
+saliency in cluttered scenes (i.e. high false positive rate). In this
+paper, we propose a fixation patch detector that predicts image patches
+that contain human fixations with high probability.
+	
+2.主要问题
+
+	这个问题重要吗？为什么？
+	Important. Because it means gaze distribution is related with image features. 
+	我为什么要读这篇文献？ 
+	Gaze keyword
+	是否有人做过？
+	Yes
+	自己会怎么设计方法来解决？
+	I will build a mapping from image feature to gaze density
+3.图表
+
+	3.A	通过图表，你会得到什么结论？
+	跟我说的方法差不多。
+	
 #From Where and How to What We See
 ###S. Karthikeyan, Vignesh Jagadeesh, Renuka Shenoy, Miguel Eckstein, B.S. Manjunath
 ####ICCV2013
@@ -54,16 +84,30 @@
 	略
 	6.C	讨论中是如何从已知的知识得到结论
 	略
-7.不足
-	
-	7.A	试验结果是否支持文章的结论 问题、设计、方法和讨论的逻辑关系是什么，作者是如何达到目的的？有哪些哲学思想和技巧？
+
+#Learning to Recognize Daily Actions using Gaze
+###Alireza Fathi, Yin Li, James M. Rehg
+####ECCV2012
+
+1.论文主要解决的问题是什么？
+	 Recognizing daily actions and predicting gaze locations in videos
+recorded from an *egocentric (e.g. go-pro)* camera. This paper also requires that action and eye should work together。
+
+2.主要问题
+
+	这个问题重要吗？为什么？
+	不重要， 我们不在egocentric的环境下。
+	我为什么要读这篇文献？ 
+	学习识别action的方法
+	是否有人做过？
+	有
+	自己会怎么设计方法来解决？
+	因为数据中手眼协调，那么眼睛看到的区域包含动作信息，提取出来训练分类器就可以了
+
+3.图表
+
+	3.A	通过图表，你会得到什么结论？
+		图模型解决这个问题， 高gaze 密度的地方做action的概率越大
+	3.B	图表说明什么问题？能否说明该问题?自己要得到这张图会用什么方法？作者用的是什么方法？
 		
-	7.B	还有哪些不确定采用的是推测的地方？为什么不确定？我能否进一步确定？ 
-	
-	7.C	文章是如何描述结果、如何解析图表趋势，论据如何组合，如何表达自己的观点？
-	
-8.和同类文献，有什么共同点和不同点？
-
-9.和以前的文献，作者思路上有什么变化，下一步是什么？我能否有进一步改进或者加入？
-
-10.别人还有哪些地方没做？要是我接着此方向继续做，哪些是在我所在工作条件下可以做的，哪些必须要做，哪些别人肯定比我做得更好更快？
+	3.C	你能够重新画出这张图，用自己的语言表达吗？
