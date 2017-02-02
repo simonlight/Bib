@@ -8,12 +8,14 @@ attribute is found by a MIL over words
 ###Zhilin Yang, Ye Yuan, Yuexin Wu, Ruslan Salakhutdinov, William W. Cohen},
 ####NIPS2016
 
-1.论文主要解决的问题是什么？
+important, need to re read carefully
 
+1.论文主要解决的问题是什么？
+improve encoder+attention+decoder framework 
 2.主要问题
 
 	这个问题重要吗？为什么？
-	
+	important. More thought on attention model. Discriminative supervision is interesting.
 	我为什么要读这篇文献？ 
 	
 	是否有人做过？
