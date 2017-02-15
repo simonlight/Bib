@@ -12,6 +12,8 @@
   
 }
 
+**key words**: CNN+RNN, attribute
+
 **Problem**: whether avoiding the explicit representation of high-level information leads to the success of CNN+RNN framework in Vision to Language problem (image captioning/single word QA/sentence QA).
 
 **Conclusion**: high-level information is critical.
@@ -36,6 +38,8 @@ For different V2L problems, models are different. (shown in Fig. 3).
   year = {2017}
   
 }
+
+**key words**: CNN+RNN, attribute, where to add attribute
 
 **Problem**: where to add Attributes into RNN part for improving the performance
 
@@ -66,8 +70,9 @@ A<sub>2</sub> --- A<sub>5</sub>, all explained in his Fig. 1
 
 }
 
-**Problem**: incorporating attention into the CNN+RNN framework.
+**key words**: CNN+RNN, attention
 
+**Problem**: incorporating attention into the CNN+RNN framework.
 
 **Analysis**: The basic architecture is CNN+RNN.
 
@@ -88,13 +93,18 @@ The figure here explains well the model: http://blog.csdn.net/shenxiaolu1984/art
 
 }
 
+**key words**: RNN+CNN, attention, high-level semantic scene analysis, 
+
 **Problem**: 1. align visual regions with words using the attention mechanism as in icml2015/Xu. 2. incorporating scene-specific context that captures higher-level semantic information encoded in an image.
 
-**Analysis**: Globally, this model adds scene information into the LSTM as an extra input.
+**Analysis**: Globally, this model adds scene information (high level conception) into the LSTM as an extra input.
 
 1. select regions and extract CNN feature from them. (Fig. 2)
 
 2. attention model arch is the same as icml2015/Xu. The difference is that the candidate regions in icml2015/Xu is grids while this paper uses more fine regions. (Fig. 3)  
+
+3. Scene-specific LSTM. This is an instantiation of the g-LSTM [iccv2015/Jia]. The scene vector is plugged into the LSTM as shown in Fig. 4. The general pipeline of this model is presented in Fig. 1. The scene vector is served as a global context. It is used to biasing the LSTM, so the question: how to caculate it? 
+Two steps: unsupervised clustering of captions into “scene” categories and supervised learning of a classifier to predict the scene categories from the visual appearance.
 
 - @inproceedings{arxiv2016/Lu,
 
@@ -108,6 +118,7 @@ The figure here explains well the model: http://blog.csdn.net/shenxiaolu1984/art
   
 }
 
+**key words**: RNN+CNN, attention, when 
 
 
 - @inproceedings{arxiv2016/Zhou,
