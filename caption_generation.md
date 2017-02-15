@@ -77,7 +77,9 @@ A<sub>2</sub> --- A<sub>5</sub>, all explained in his Fig. 1
 **Analysis**: The basic architecture is CNN+RNN.
 
 The CNN feature is extracted from the last convolutional layer of VGG-16. The input of the RNN has the context, which is defined as the image being applied attention mask. Soft attention is a simple weighted sum without technical RL strategy. Furthermore, regularization term which forces the attention to look over the whole image. 
-The figure here explains well the model: http://blog.csdn.net/shenxiaolu1984/article/details/51493673 and (Fig. 3) in pami2016/kun
+The figure here explains well the model: http://blog.csdn.net/shenxiaolu1984/article/details/51493673 
+and (Fig. 3) in pami2016/kun
+and Fig. 2(a) in arxiv2016/Lu
 
 **Conclusion**: Attention simulates how human viewing an image. This paper does alignment automatically. Specifically, the region with attention is also aligned well with the word predicted. This is the first paper using the attention for image captioning. 
 
@@ -101,10 +103,12 @@ The figure here explains well the model: http://blog.csdn.net/shenxiaolu1984/art
 
 1. select regions and extract CNN feature from them. (Fig. 2)
 
-2. attention model arch is the same as icml2015/Xu. The difference is that the candidate regions in icml2015/Xu is grids while this paper uses more fine regions. (Fig. 3)  
+2. attention model arch is the same as icml2015/Xu. The difference is that the candidate regions in [icml2015/Xu] is grids while this paper uses more fine regions. (Fig. 3)  
 
 3. Scene-specific LSTM. This is an instantiation of the g-LSTM [iccv2015/Jia]. The scene vector is plugged into the LSTM as shown in Fig. 4. The general pipeline of this model is presented in Fig. 1. The scene vector is served as a global context. It is used to biasing the LSTM, so the question: how to caculate it? 
 Two steps: unsupervised clustering of captions into “scene” categories and supervised learning of a classifier to predict the scene categories from the visual appearance.
+
+**Conclusion**: the combination of attention and scene vector is useful 
 
 - @inproceedings{arxiv2016/Lu,
 
@@ -118,8 +122,18 @@ Two steps: unsupervised clustering of captions into “scene” categories and s
   
 }
 
-**key words**: RNN+CNN, attention, when 
+**key words**: RNN+CNN, attention, when to pay attention to the image
 
+**Problem**: The decoder likely requires little to no visual information from the image to predict non-visual words such as “the” and “of”. Other words that may seem visual can often be predicted reliably just from the language model e.g., “sign” after “behind a red stop” or “phone” following “talking on a cell”. 
+
+**Analysis**: the model can attend to the image if necessary, otherwise it will just rely on language model. Fig. 1 describes how this system performs. 
+
+Two important novelties:
+
+1. using current state h<sub>t</sub> to calculate attention, which is different from [icml2015/Xu]. See Fig. 2 for understanding the difference. The performance is better but the explanation I do not understand.
+
+2. the sentinel is a latent representation of what the decoder already knows. This paper then extracts **the information from the memory cell**. the sentinel gate is calculated from the current and previous informatio to decide n 
+ 
 
 - @inproceedings{arxiv2016/Zhou,
 
