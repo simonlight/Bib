@@ -1,8 +1,21 @@
+@inproceedings{cvpr2017/Liu,
+  author    = {Siqi Liu, Zhenhai Zhu, Ning Ye, Sergio Guadarrama, and Kevin Murphy},
+  title     = {Optimization of image description metrics using policy gradient methods},
+  booktitle = {CVPR (under review)},
+  year = {2017}
+}
+
+
+
+
+
+
 #BOOSTING IMAGE CAPTIONING WITH ATTRIBUTES
 ###Ting Yao, Yingwei Pan, Yehao Li, Zhaofan Qiu, Tao Mei
 ####ICLR2017 under review
 
-attribute is found by a MIL over words
+
+
 
 #Review Networks for Caption Generation},
 ###Zhilin Yang, Ye Yuan, Yuexin Wu, Ruslan Salakhutdinov, William W. Cohen},
