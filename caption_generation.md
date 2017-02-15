@@ -1,33 +1,4 @@
-*Attribute:*
-- @inproceedings{iclr2017/Yao,
-
-  author    = {Ting Yao, Yingwei Pan, Yehao Li, Zhaofan Qiu, Tao Mei},
-  
-  title     = {Boosting  image captioning with attributes},
-  
-  booktitle = {ICLR (rejected)},
-  
-  year = {2017}
-  
-}
-
-*Purpose: where to add Attributes into RNN part for improving the performance*
-
-*Value: *
-
-*Analysis:*
-
-The basic architecture is CNN+RNN+Attribute.
-
-What's Attribute? The objects detected. This work uses MIL for detecting as [cvpr2015/Fang].
-
-The models have 5 variations, the differences are where to add Attributes into the RNN
-
-A<sub>1: same as [cvpr2016/Wu], image infomation is absent, only attribute is used as the first input for the RNN
-
-A<sub>2 --- A<sub>5, all explained in his Fig. 1
-
-*Conclusion:* A<sub>5 is the best, where image is the first input, and attribute is added to every timestep of RNN.
+##Attribute based
 
 - @inproceedings{cvpr2016/Wu,
 
@@ -41,27 +12,89 @@ A<sub>2 --- A<sub>5, all explained in his Fig. 1
   
 }
 
+**Problem**: whether avoiding the explicit representation of high-level information leads to the success of CNN+RNN framework in Vision to Language problem (image captioning/single word QA/sentence QA).
 
-- @inproceedings{cvpr2017/Liu,  
+**Conclusion**: high-level information is critical.
 
-  author    = {Siqi Liu, Zhenhai Zhu, Ning Ye, Sergio Guadarrama, and Kevin Murphy},
+**Analysis**: 
+
+The basic architecture is CNN+RNN with a intermediate layer for predicting the attribute. The attribute is then used as the first input of the RNN. (shown in Fig. 1)
+
+What's Attribute? The objects detected. This paper uses a region-based multi-label classification framework to do this. (shown in Fig. 2)
+
+For different V2L problems, models are different. (shown in Fig. 3). 
+ 
+
+- @inproceedings{iclr2017/Yao,
+
+  author    = {Ting Yao, Yingwei Pan, Yehao Li, Zhaofan Qiu, Tao Mei},
   
-  title     = {Optimization of image description metrics using policy gradient methods},
+  title     = {Boosting  image captioning with attributes},
   
-  booktitle = {CVPR (under review)},
+  booktitle = {ICLR (rejected)},
   
   year = {2017}
   
 }
 
-*Purpose: an optimization method on the metrics of text generation.*
+**Problem**: where to add Attributes into RNN part for improving the performance
 
-*Value: It's possible to get high score with this methods*
+**Analysis**:
 
-*Analysis: I did not read it through*
+The basic architecture is CNN+RNN+Attribute.
 
-*code: No*
+What's Attribute? The objects detected. This work uses MIL for detecting as [cvpr2015/Fang].
 
+The models have 5 variations, the differences are where to add Attributes into the RNN
+
+A<sub>1</sub>: same as [cvpr2016/Wu], image infomation is absent, only attribute is used as the first input for the RNN
+
+A<sub>2</sub> --- A<sub>5</sub>, all explained in his Fig. 1
+
+**Conclusion**: **know** where to add Attributes into RNN part for improving the performance. A<sub>5</sub> is the best, where image is the first input, and attribute is added to every timestep of RNN.
+
+##Attention based
+- @inproceedings{icml2015/Xu,
+
+  author    = {Kelvin Xu, Jimmy Ba, Ryan Kiros, Kyunghyun Cho, Aaron Courville, Ruslan Salakhutdinov, Richard Zemel, Yoshua Bengio.},
+  
+  title     = {Show, Attend and Tell: Neural Image Caption Generation with Visual Attention},
+
+  booktitle = {ICML},
+
+  year = {2015}
+
+}
+
+**Problem**: incorporating attention into the CNN+RNN framework.
+
+
+**Analysis**: The basic architecture is CNN+RNN.
+
+The CNN feature is extracted from the last convolutional layer of VGG-16. The input of the RNN has the context, which is defined as the image being applied attention mask. Soft attention is a simple weighted sum without technical RL strategy. Furthermore, regularization term which forces the attention to look over the whole image. 
+The figure here explains well the model: http://blog.csdn.net/shenxiaolu1984/article/details/51493673 and (Fig. 3) in pami2016/kun
+
+**Conclusion**: Attention simulates how human viewing an image. This paper does alignment automatically. Specifically, the region with attention is also aligned well with the word predicted. This is the first paper using the attention for image captioning. 
+
+- @article{pami2016/kun,
+
+    title={Aligning where to see and what to tell: image captioning with region-based attention and scene-specific contexts},
+    
+    author={Fu, Kun and Jin, Junqi and Cui, Runpeng and Sha, Fei and Zhang, Changshui},
+
+    journal={Pattern Analysis and Machine Intelligence, IEEE Transactions on (TPAMI)},
+
+    year={2016}
+
+}
+
+**Problem**: 1. align visual regions with words using the attention mechanism as in icml2015/Xu. 2. incorporating scene-specific context that captures higher-level semantic information encoded in an image.
+
+**Analysis**: Globally, this model adds scene information into the LSTM as an extra input.
+
+1. select regions and extract CNN feature from them. (Fig. 2)
+
+2. attention model arch is the same as icml2015/Xu. The difference is that the candidate regions in icml2015/Xu is grids while this paper uses more fine regions. (Fig. 3)  
 
 - @inproceedings{arxiv2016/Lu,
 
@@ -75,17 +108,7 @@ A<sub>2 --- A<sub>5, all explained in his Fig. 1
   
 }
 
-- @article{pami2016/kun,
 
-    title={Aligning where to see and what to tell: image captioning with region-based attention and scene-specific contexts},
-    
-    author={Fu, Kun and Jin, Junqi and Cui, Runpeng and Sha, Fei and Zhang, Changshui},
-
-    journal={Pattern Analysis and Machine Intelligence, IEEE Transactions on (TPAMI)},
-
-    year={2016}
-
-}
 
 - @inproceedings{arxiv2016/Zhou,
 
@@ -126,17 +149,7 @@ A<sub>2 --- A<sub>5, all explained in his Fig. 1
   
 }
 
-- @inproceedings{icml2015/Xu,
 
-  author    = {Kelvin Xu, Jimmy Ba, Ryan Kiros, Kyunghyun Cho, Aaron Courville, Ruslan Salakhutdinov, Richard Zemel, Yoshua Bengio.},
-  
-  title     = {Show, Attend and Tell: Neural Image Caption Generation with Visual Attention},
-
-  booktitle = {ICML},
-
-  year = {2015}
-
-}
 
 - @inproceedings{cvpr2015/Chen,
 
@@ -301,7 +314,27 @@ Author = {Jeff Donahue and Lisa Anne Hendricks and Sergio Guadarrama
 
 
 
+##Metric optimization
 
+- @inproceedings{cvpr2017/Liu,  
+
+  author    = {Siqi Liu, Zhenhai Zhu, Ning Ye, Sergio Guadarrama, and Kevin Murphy},
+  
+  title     = {Optimization of image description metrics using policy gradient methods},
+  
+  booktitle = {CVPR (under review)},
+  
+  year = {2017}
+  
+}
+
+*Purpose: an optimization method on the metrics of text generation.*
+
+*Value: It's possible to get high score with this methods*
+
+*Analysis: I did not read it through*
+
+*code: No*
 
 
 #Review Networks for Caption Generation},
@@ -438,84 +471,6 @@ improve encoder+attention+decoder framework
 
 10.别人还有哪些地方没做？要是我接着此方向继续做，哪些是在我所在工作条件下可以做的，哪些必须要做，哪些别人肯定比我做得更好更快？
 
-#Show, Attend and Tell: Neural Image Caption Generation with Visual Attention
-###Kelvin Xu, Jimmy Ba, Ryan Kiros, Kyunghyun Cho, Aaron Courville, Ruslan Salakhutdinov, Richard Zemel, Yoshua Bengio.
-####ICML2015
-
-1.论文主要解决的问题是什么？
-train a model that automatically learns to describe the content of images.
-We also show through visualization how
-the model is able to automatically learn to fix its
-gaze on salient objects while generating the corresponding
-words in the output sequence.
-2.主要问题
-
-	这个问题重要吗？为什么？
-	very important. Understanding the content, compress the information etc.
-	我为什么要读这篇文献？ 
-	It's the model that inspires me to create a model to generate recipe for an image.
-	是否有人做过？
-	yes
-	自己会怎么设计方法来解决？
-	Find the mapping between the word and the object. For generating a fluent phrase, the objects are first found then these words are composed to generate
-	the pharse.
-3.图表
-
-	3.A	通过图表，你会得到什么结论？
-	The alignements between predicted words and objects make sense.
-	3.B	图表说明什么问题？能否说明该问题?自己要得到这张图会用什么方法？作者用的是什么方法？
-	Objects are well aligned. Yes. The author uses a convnet to extract features before 
-	fully connected layers, then use an RNN to weight the correspondance between a word and the feature map with attention   
-	3.C	你能够重新画出这张图，用自己的语言表达吗？
-	
-4.方法分析
-	
-	作者采用什么方法来解决这个问题？假设是什么？理论依据是什么？
-	CNN + RNN + attention. For soft attention, a regularization is added to limit the probability of seeing a region summing to 1.
-	这些方法是否符合论证命题的需要？
-	-
-	通过这个方法，你觉得大概能得到怎样的结果？
-	-
-	是否有能得到更好结果的方法或更加简单的方法？
-	-
-	他为什么这样设计试验？是怎么想到的？有什么创新？你为什么没有想到？
-	-,-,-,Not very sure about what RNN can do.
-5.逻辑
-
-	5.A	这些设计能否满足需要？为什么？这种方法有什么缺陷或进一步需要阐明的地方? 结果分析统计方法有什么缺陷
-	-
-	5.B	这些试验是如何组织起来的，之间的逻辑关系是什么？每项试验都有什么意义？哪些是必要的？哪些是不必要的？ 
-		extract convolutional features.
-	5.C	如果是我得到这样的结果，我会得到什么结论？
-	-
-6.结论
-	
-	6.A	文章的结论是什么？和你想的差异在哪里?
-	
-	1. BLEU and METHOR scores are state-of-the-art
-	
-	2. attention (learned) gives more interpretability to the generation process, and the learned  alignments correspond well to human intuition
-		 
-	No difference with my expectation.
-
-	6.B	结论可靠性如何？对原来的结论有什么支持或变化？ 你如何评价？
-	-
-	6.C	讨论中是如何从已知的知识得到结论
-	observation and metric scores
-7.不足
-	
-	7.A	试验结果是否支持文章的结论 问题、设计、方法和讨论的逻辑关系是什么，作者是如何达到目的的？有哪些哲学思想和技巧？
-	-
-	7.B	还有哪些不确定采用的是推测的地方？为什么不确定？我能否进一步确定？ 
-	-
-	7.C	文章是如何描述结果、如何解析图表趋势，论据如何组合，如何表达自己的观点？
-	-
-8.和同类文献，有什么共同点和不同点？
--
-9.和以前的文献，作者思路上有什么变化，下一步是什么？我能否有进一步改进或者加入？
-Others rely on object detection to do the alignments, but this work does not need this effort.
-10.别人还有哪些地方没做？要是我接着此方向继续做，哪些是在我所在工作条件下可以做的，哪些必须要做，哪些别人肯定比我做得更好更快？
--
 
 #Guiding the Long-Short Term Memory Model for Image Caption Generation
 ###Xu Jia, Efstratios Gavves, Basura Fernando, Tinne Tuytelaars},
@@ -591,68 +546,5 @@ image content.
 
   
 
-#Deep Visual-Semantic Alignments for Generating Image Descriptions
-###Andrej Karpathy, Li Fei-Fei
-####CVPR2015
-1.论文主要解决的问题是什么？
 
-2.主要问题
-
-	这个问题重要吗？为什么？
-	
-	我为什么要读这篇文献？ 
-	
-	是否有人做过？
-	
-	自己会怎么设计方法来解决？
-	
-3.图表
-
-	3.A	通过图表，你会得到什么结论？
-
-	3.B	图表说明什么问题？能否说明该问题?自己要得到这张图会用什么方法？作者用的是什么方法？
-	
-	3.C	你能够重新画出这张图，用自己的语言表达吗？
-	
-4.方法分析
-	
-	作者采用什么方法来解决这个问题？假设是什么？理论依据是什么？
-	
-	这些方法是否符合论证命题的需要？
-	
-	通过这个方法，你觉得大概能得到怎样的结果？
-	
-	是否有能得到更好结果的方法或更加简单的方法？
-	
-	他为什么这样设计试验？是怎么想到的？有什么创新？你为什么没有想到？
-	
-5.逻辑
-
-	5.A	这些设计能否满足需要？为什么？这种方法有什么缺陷或进一步需要阐明的地方? 结果分析统计方法有什么缺陷
-		
-	5.B	这些试验是如何组织起来的，之间的逻辑关系是什么？每项试验都有什么意义？哪些是必要的？哪些是不必要的？ 
-		
-	5.C	如果是我得到这样的结果，我会得到什么结论？
-	
-6.结论
-	
-	6.A	文章的结论是什么？和你想的差异在哪里?
-	
-	6.B	结论可靠性如何？对原来的结论有什么支持或变化？ 你如何评价？
-	
-	6.C	讨论中是如何从已知的知识得到结论
-
-7.不足
-	
-	7.A	试验结果是否支持文章的结论 问题、设计、方法和讨论的逻辑关系是什么，作者是如何达到目的的？有哪些哲学思想和技巧？
-		
-	7.B	还有哪些不确定采用的是推测的地方？为什么不确定？我能否进一步确定？ 
-	
-	7.C	文章是如何描述结果、如何解析图表趋势，论据如何组合，如何表达自己的观点？
-	
-8.和同类文献，有什么共同点和不同点？
-
-9.和以前的文献，作者思路上有什么变化，下一步是什么？我能否有进一步改进或者加入？
-
-10.别人还有哪些地方没做？要是我接着此方向继续做，哪些是在我所在工作条件下可以做的，哪些必须要做，哪些别人肯定比我做得更好更快？
 
