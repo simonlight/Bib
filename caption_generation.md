@@ -1,8 +1,45 @@
-|      	| cvpr2017/Liu 	|   	|   	|   	|
-|------	|---			|---	|---	|---	|
-| code 	|   	|   	|   	|   	|
-|      	|   	|   	|   	|   	|
-|      	|   	|   	|   	|   	|
+*Attribute:*
+- @inproceedings{iclr2017/Yao,
+
+  author    = {Ting Yao, Yingwei Pan, Yehao Li, Zhaofan Qiu, Tao Mei},
+  
+  title     = {Boosting  image captioning with attributes},
+  
+  booktitle = {ICLR (rejected)},
+  
+  year = {2017}
+  
+}
+
+*Purpose: where to add Attributes into RNN part for improving the performance*
+
+*Value: *
+
+*Analysis:*
+
+The basic architecture is CNN+RNN+Attribute.
+
+What's Attribute? The objects detected. This work uses MIL for detecting as [cvpr2015/Fang].
+
+The models have 5 variations, the differences are where to add Attributes into the RNN
+
+A<sub>1: same as [cvpr2016/Wu], image infomation is absent, only attribute is used as the first input for the RNN
+
+A<sub>2 --- A<sub>5, all explained in his Fig. 1
+
+*Conclusion:* A<sub>5 is the best, where image is the first input, and attribute is added to every timestep of RNN.
+
+- @inproceedings{cvpr2016/Wu,
+
+  author    = {Qi Wu, Chunhua Shen, Lingqiao Liu, Anthony Dick, Anton van den Hengel},
+  
+  title     = {What Value Do Explicit High Level Concepts Have in Vision to Language Problems?},
+  
+  booktitle = {CVPR)},
+  
+  year = {2016}
+  
+}
 
 
 - @inproceedings{cvpr2017/Liu,  
@@ -24,19 +61,6 @@
 *Analysis: I did not read it through*
 
 *code: No*
-
-- @inproceedings{iclr2017/Yao,
-
-  author    = {Ting Yao, Yingwei Pan, Yehao Li, Zhaofan Qiu, Tao Mei},
-  
-  title     = {Boosting  image captioning with attributes},
-  
-  booktitle = {ICLR (rejected)},
-  
-  year = {2017}
-  
-}
-
 
 
 - @inproceedings{arxiv2016/Lu,
@@ -87,17 +111,7 @@
   
 }
 
-- @inproceedings{cvpr2016/Wu,
 
-  author    = {Qi Wu, Chunhua Shen, Lingqiao Liu, Anthony Dick, Anton van den Hengel},
-  
-  title     = {What Value Do Explicit High Level Concepts Have in Vision to Language Problems?},
-  
-  booktitle = {CVPR)},
-  
-  year = {2016}
-  
-}
 
 
 - @inproceedings{nips2016/Yang,
