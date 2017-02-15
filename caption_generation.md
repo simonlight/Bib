@@ -10,6 +10,11 @@
   
 }
 
+*Purpose: an optimization method on the metrics of text generation.*
+
+*Value: It's possible to get high score with this methods*
+
+*Analysis: I did not read it through*
 - @inproceedings{iclr2017/Yao,
 
   author    = {Ting Yao, Yingwei Pan, Yehao Li, Zhaofan Qiu, Tao Mei},
@@ -46,149 +51,229 @@
 
 }
 
-@inproceedings{arxiv2016/Zhou,
+- @inproceedings{arxiv2016/Zhou,
+
   author    = {Luowei Zhou, Chenliang Xu, Parker Koch, and Jason J. Corso},
+  
   title     = {Watch What You Just Said: Image Captioning with Text-Conditional Attention},
+  
   booktitle = {arxiv)},
+  
   year = {2016}
+
 }
 
-@inproceedings{cvpr2016/You,
+- @inproceedings{cvpr2016/You,
+
   author    = {Quanzeng You, Hailin Jin, Zhaowen Wang, Chen Fang, and Jiebo Luo},
+  
   title     = {Image captioning with semantic attention},
+  
   booktitle = {CVPR)},
+  
   year = {2016}
-}
-
-@inproceedings{cvpr2016/Wu,
-  author    = {Qi Wu, Chunhua Shen, Lingqiao Liu, Anthony Dick, Anton van den Hengel},
-  title     = {What Value Do Explicit High Level Concepts Have in Vision to Language Problems?},
-  booktitle = {CVPR)},
-  year = {2016}
-}
-
-
-@inproceedings{nips2016/Yang,
-  author    = {Zhilin Yang, Ye Yuan, Yuexin Wu, Ruslan Salakhutdinov, William W. Cohen},
-  title     = {Review Networks for Caption Generation},
-  booktitle = {NIPS},
-  year = {2016}
-}
-
-@inproceedings{icml2015/Xu,
-  author    = {Kelvin Xu, Jimmy Ba, Ryan Kiros, Kyunghyun Cho, Aaron Courville, Ruslan Salakhutdinov, Richard Zemel, Yoshua Bengio.},
-  title     = {Show, Attend and Tell: Neural Image Caption Generation with Visual Attention},
-  booktitle = {ICML},
-  year = {2015}
-}
-
-@inproceedings{cvpr2015/Chen,
-  author    = {X. Chen and C. L. Zitnick.},
-  title     = {Mind’s eye: A recurrent visual
-representation for image caption generation.},
-  booktitle = {CVPR},
-  year = {2015}
-}
-
-@inproceedings{iclr2015/Bahdanau,
-  author    = {Dzmitry Bahdanau, Kyunghyun Cho, Yoshua Bengio},
-  title     = {Neural Machine Translation by Jointly Learning to Align and Translate},
-  booktitle = {ICLR},
-  year = {2015}
-}
-
-@inproceedings{cvpr2015/Donahue,
-Author = {Jeff Donahue and Lisa Anne Hendricks and Sergio Guadarrama
-             and Marcus Rohrbach and Subhashini Venugopalan and Kate Saenko
-             and Trevor Darrell},
-   Title = {Long-term Recurrent Convolutional Networks
-            for Visual Recognition and Description},
-   Year  = {2015},
-   Booktitle = {CVPR}
-}
-
-@inproceedings{cvpr2015/Karpathy,
-  author    = {Andrej Karpathy, Li Fei-Fei},
-  title     = {Deep Visual-Semantic Alignments for Generating Image Descriptions},
-  booktitle = {CVPR},
-  year = {2015}
-}
-
-@inproceedings{iccv2015/Jia,
-  author    = {Xu Jia, Efstratios Gavves, Basura Fernando, Tinne Tuytelaars},
-  title     = {Guiding the Long-Short Term Memory Model for Image Caption Generation},
-  booktitle = {ICCV},
-  year = {2015}
-}
-
-
-@inproceedings{cvpr2015/Vinyals,
-  author    = {Oriol Vinyals, Alexander Toshev, Samy Bengio, Dumitru Erhan},
-  title     = {Show and Tell: A Neural Image Caption Generator},
-  booktitle = {CVPR},
-  year = {2015}
   
 }
 
-@inproceedings{cvpr2015/Fang,
-  author    = {Hao Fang, Saurabh Gupta, Forrest Iandola, Rupesh Srivastava, Li Deng, Piotr Dollár, Jianfeng Gao, Xiaodong He, Margaret Mitchell, John C. Platt, C. Lawrence Zitnick, Geoffrey Zweig},
-  title     = {From Captions to Visual Concepts and Back},
-  booktitle = {CVPR},
-  year = {2015}
-}
+- @inproceedings{cvpr2016/Wu,
 
-@inproceedings{iclr2015/Mao,
-  author    = {Junhua Mao, Wei Xu, Yi Yang, Jiang Wang, Zhiheng Huang, Alan Yuille},
-  title     = {Deep Captioning with Multimodal Recurrent Neural Networks (m-RNN)},
-  booktitle = {ICLR},
-  year = {2015}
-}
-
-@inproceedings{emnlp2015/Luong,
-  author    = {Minh-Thang Luong, Hieu Pham, Christopher D. Manning},
-  title     = {Effective Approaches to Attention-based Neural Machine Translation},
-  booktitle = {EMNLP},
-  year = {2015}
-}
-
-@inproceedings{tacl2015/Yin,
-  author    = {Wenpeng Yin, Hinrich Schütze, Bing Xiang, Bowen Zhou},
-  title     = {ABCNN: Attention-Based Convolutional Neural Network for Modeling Sentence Pairs},
-  booktitle = {TACL},
-  year = {2015}
+  author    = {Qi Wu, Chunhua Shen, Lingqiao Liu, Anthony Dick, Anton van den Hengel},
+  
+  title     = {What Value Do Explicit High Level Concepts Have in Vision to Language Problems?},
+  
+  booktitle = {CVPR)},
+  
+  year = {2016}
+  
 }
 
 
-@inproceedings{pr2014/Rohrbach,
-  author    = {Anna Rohrbach, Marcus Rohrbach, Wei Qiu, Annemarie Friedrich,Manfred Pinkal, and Bernt Schiele},
-  title     = {Coherent Multi-Sentence Video Description with Variable Level of Detail},
-  booktitle = {PR},
-  year = {2014}
-}
+- @inproceedings{nips2016/Yang,
 
-@inproceedings{tacl2014/Kiros,
-  author    = {Jamie Ryan Kiros, Ruslan Salakhutdinov, Richard Zemel},
-  title     = {Unifying Visual-Semantic Embeddings with Multimodal Neural Language Models },
-  booktitle = {TACL},
-  year = {2014}
-}
-
-@inproceedings{nips2014/Mnih,
-  author    = {Volodymyr Mnih, Nicolas Heess, Alex Graves, Koray Kavukcuoglu},
-  title     = {Recurrent Models of Visual Attention},
+  author    = {Zhilin Yang, Ye Yuan, Yuexin Wu, Ruslan Salakhutdinov, William W. Cohen},
+  
+  title     = {Review Networks for Caption Generation},
+  
   booktitle = {NIPS},
-  year = {2014}
+  
+  year = {2016}
+  
+}
+
+- @inproceedings{icml2015/Xu,
+
+  author    = {Kelvin Xu, Jimmy Ba, Ryan Kiros, Kyunghyun Cho, Aaron Courville, Ruslan Salakhutdinov, Richard Zemel, Yoshua Bengio.},
+  
+  title     = {Show, Attend and Tell: Neural Image Caption Generation with Visual Attention},
+
+  booktitle = {ICML},
+
+  year = {2015}
+
+}
+
+- @inproceedings{cvpr2015/Chen,
+
+  author    = {X. Chen and C. L. Zitnick.},
+
+  title     = {Mind’s eye: A recurrent visual representation for image caption generation.},
+
+  booktitle = {CVPR},
+
+  year = {2015}
+
+}
+
+- @inproceedings{iclr2015/Bahdanau,
+
+  author    = {Dzmitry Bahdanau, Kyunghyun Cho, Yoshua Bengio},
+
+  title     = {Neural Machine Translation by Jointly Learning to Align and Translate},
+
+  booktitle = {ICLR},
+
+  year = {2015}
+
+}
+
+- @inproceedings{cvpr2015/Donahue,
+
+Author = {Jeff Donahue and Lisa Anne Hendricks and Sergio Guadarrama
+             and Marcus Rohrbach and Subhashini Venugopalan and Kate Saenko
+             and Trevor Darrell},
+
+   Title = {Long-term Recurrent Convolutional Networks
+            for Visual Recognition and Description},
+
+   Year  = {2015},
+
+   Booktitle = {CVPR}
+
+}
+
+- @inproceedings{cvpr2015/Karpathy,
+
+  author    = {Andrej Karpathy, Li Fei-Fei},
+
+  title     = {Deep Visual-Semantic Alignments for Generating Image Descriptions},
+
+  booktitle = {CVPR},
+
+  year = {2015}
+
+}
+
+- @inproceedings{iccv2015/Jia,
+
+  author    = {Xu Jia, Efstratios Gavves, Basura Fernando, Tinne Tuytelaars},
+
+  title     = {Guiding the Long-Short Term Memory Model for Image Caption Generation},
+
+  booktitle = {ICCV},
+
+  year = {2015}
+
 }
 
 
+- @inproceedings{cvpr2015/Vinyals,
+
+  author    = {Oriol Vinyals, Alexander Toshev, Samy Bengio, Dumitru Erhan},
+
+  title     = {Show and Tell: A Neural Image Caption Generator},
+
+  booktitle = {CVPR},
+
+  year = {2015}
+
+}
+
+- @inproceedings{cvpr2015/Fang,
+
+  author    = {Hao Fang, Saurabh Gupta, Forrest Iandola, Rupesh Srivastava, Li Deng, Piotr Dollár, Jianfeng Gao, Xiaodong He, Margaret Mitchell, John C. Platt, C. Lawrence Zitnick, Geoffrey Zweig},
+ 
+  title     = {From Captions to Visual Concepts and Back},
+ 
+  booktitle = {CVPR},
+ 
+  year = {2015}
+
+}
+
+- @inproceedings{iclr2015/Mao,
+  
+  author    = {Junhua Mao, Wei Xu, Yi Yang, Jiang Wang, Zhiheng Huang, Alan Yuille},
+  
+  title     = {Deep Captioning with Multimodal Recurrent Neural Networks (m-RNN)},
+  
+  booktitle = {ICLR},
+  
+  year = {2015}
+
+}
+
+- @inproceedings{emnlp2015/Luong,
+
+  author    = {Minh-Thang Luong, Hieu Pham, Christopher D. Manning},
+
+  title     = {Effective Approaches to Attention-based Neural Machine Translation},
+
+  booktitle = {EMNLP},
+
+  year = {2015}
+
+}
+
+- @inproceedings{tacl2015/Yin,
+
+  author    = {Wenpeng Yin, Hinrich Schütze, Bing Xiang, Bowen Zhou},
+
+  title     = {ABCNN: Attention-Based Convolutional Neural Network for Modeling Sentence Pairs},
+
+  booktitle = {TACL},
+
+  year = {2015}
+
+}
 
 
+- @inproceedings{pr2014/Rohrbach,
+
+  author    = {Anna Rohrbach, Marcus Rohrbach, Wei Qiu, Annemarie Friedrich,Manfred Pinkal, and Bernt Schiele},
+
+  title     = {Coherent Multi-Sentence Video Description with Variable Level of Detail},
+
+  booktitle = {PR},
+
+  year = {2014}
+
+}
+
+- @inproceedings{tacl2014/Kiros,
+
+  author    = {Jamie Ryan Kiros, Ruslan Salakhutdinov, Richard Zemel},
+
+  title     = {Unifying Visual-Semantic Embeddings with Multimodal Neural Language Models },
+
+  booktitle = {TACL},
+
+  year = {2014}
+
+}
+
+- @inproceedings{nips2014/Mnih,
+
+  author    = {Volodymyr Mnih, Nicolas Heess, Alex Graves, Koray Kavukcuoglu},
+
+  title     = {Recurrent Models of Visual Attention},
+
+  booktitle = {NIPS},
+
+  year = {2014}
+
+}
 
 
-
-#BOOSTING IMAGE CAPTIONING WITH ATTRIBUTES
-###Ting Yao, Yingwei Pan, Yehao Li, Zhaofan Qiu, Tao Mei
-####ICLR2017 under review
 
 
 
