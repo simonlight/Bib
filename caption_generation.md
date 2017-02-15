@@ -1,7 +1,11 @@
 @inproceedings{cvpr2017/Liu,
+
   author    = {Siqi Liu, Zhenhai Zhu, Ning Ye, Sergio Guadarrama, and Kevin Murphy},
+  
   title     = {Optimization of image description metrics using policy gradient methods},
+  
   booktitle = {CVPR (under review)},
+  
   year = {2017}
 }
 
