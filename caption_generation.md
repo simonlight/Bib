@@ -208,11 +208,6 @@ The word guides the image feature at each time step according to eq. 5 and eq. 6
 }
 
 
-
-
-
-
-
 - @inproceedings{nips2016/Yang,
 
   author    = {Zhilin Yang, Ye Yuan, Yuexin Wu, Ruslan Salakhutdinov, William W. Cohen},
@@ -224,7 +219,6 @@ The word guides the image feature at each time step according to eq. 5 and eq. 6
   year = {2016}
   
 }
-
 
 
 - @inproceedings{cvpr2015/Chen,
@@ -277,8 +271,6 @@ Author = {Jeff Donahue and Lisa Anne Hendricks and Sergio Guadarrama
   year = {2015}
 
 }
-
-
 
 
 - @inproceedings{cvpr2015/Vinyals,
