@@ -192,8 +192,38 @@ The word guides the image feature at each time step according to eq. 5 and eq. 6
 
 **code**: yes, lua
 
+**not clear**: the textual mask on the attributes simplifies the fusion of text and image. It seems that textual feature reweights the iamge feature. However, there seems to be a typo when explaining the eq. 5
+
+- @inproceedings{nips2016/Yang,
+
+  author    = {Zhilin Yang, Ye Yuan, Yuexin Wu, Ruslan Salakhutdinov, William W. Cohen},
+  
+  title     = {Review Networks for Caption Generation},
+  
+  booktitle = {NIPS},
+  
+  year = {2016}
+  
+}
+
+**keyword**: CNN+RNN, review network, attention, multi-task learning, supervison signal
+
+**Problem**: First, the attention mechanism proceeds in a sequential manner and thus **lacks global modeling abilities**. More specifically, at the generation step t, the decoded token is conditioned on the attention results at
+the current time step ~ht, but has no information about future attention results ~ht' with t' > t. For
+example, when there are multiple objects in the image, the caption tokens generated at the beginning focuses on the first one or two objects and is unaware of the other objects, which is potentially suboptimal. Second, previous works show that **discriminative supervision (e.g., predicting word occurrences in the caption) is beneficial for generative models [cvpr2015/Fang]**, but it is not clear how to integrate discriminative supervision into the encoder-decoder framework in an end-to-end manner.
+
+**Analysis**:
+
+This generalizes [icml2015/Xu] by applying attention mechanism on the encoder for extracting a compact global information. The decoder part modifies according to the output of the encoder but its less different from [icml2015/Xu].
+
+The reviwer is a LSTM with a fixed length of time step. Two kinds of reviewers are proposed for resp. image input and text input. 
+Fig.1 and Fig.2 clearly indicate how they work. 
+
+section 3.6 talks about when reviwer net is the same as [icml2015/Xu]. The most important one is the setting Tr = Tx, which means the [icml2015/Xu] attention network needs a lot of review step. In their work although how to choose Tr is not covered, its much less than Tx. that means the review net can abstract the information. 
+**code**: yes, lua
 
 
+##Guiding
 
 - @inproceedings{iccv2015/Jia,
 
@@ -207,18 +237,57 @@ The word guides the image feature at each time step according to eq. 5 and eq. 6
 
 }
 
+**keyword**: CNN+RNN, guiding LSTM (g-LSTM)
 
-- @inproceedings{nips2016/Yang,
+**Problem**: We notice that sometimes the generated sentence seems to “drift away” or “lose track” of the original image content, generating a description that is common in the dataset, yet only weakly coupled to the input image. We hypothesize this is because the decoding step needs to find a balance between two, sometimes contradicting, forces: on the one hand, the sentence to be generated needs to describe the image content; on the other hand, the generated sentence needs to fit the language model, with more likely word combinations to be preferred. The system then may “lose track” of the original image content if the latter force starts to dominate. From an image caption generation point of view, however, staying close to the image contentmay be considered the most important of the two.
 
-  author    = {Zhilin Yang, Ye Yuan, Yuexin Wu, Ruslan Salakhutdinov, William W. Cohen},
-  
-  title     = {Review Networks for Caption Generation},
-  
-  booktitle = {NIPS},
-  
-  year = {2016}
-  
+**Analysis**: They propose g-LSTM, LSTM with an extra input containing the **static** (comparing with arxiv2016/Zhou) semantic information.
+
+The author proposed three sementaic info:
+
+1. retrieve text from image. The text is used as guiding info
+
+2. using sementic embedding representation (intermediate result of the first method)
+
+3. the whole image
+
+**conclusion**: the second method is the best.   
+
+
+
+##Basic arch: CNN+RNN
+
+- @inproceedings{cvpr2015/Vinyals,
+
+  author    = {Oriol Vinyals, Alexander Toshev, Samy Bengio, Dumitru Erhan},
+
+  title     = {Show and Tell: A Neural Image Caption Generator},
+
+  booktitle = {CVPR},
+
+  year = {2015}
+
 }
+
+
+- @inproceedings{cvpr2015/Karpathy,
+
+  author    = {Andrej Karpathy, Li Fei-Fei},
+
+  title     = {Deep Visual-Semantic Alignments for Generating Image Descriptions},
+
+  booktitle = {CVPR},
+
+  year = {2015}
+
+}
+
+**keywords**: CNN+RNN
+
+**problem**: the author aligns the image patch with the text snippets. Also, they do the image captioning using a standard CNN+RNN.
+
+**analysis**: see [cvpr2015/Vinyals]
+
 
 
 - @inproceedings{cvpr2015/Chen,
@@ -260,30 +329,8 @@ Author = {Jeff Donahue and Lisa Anne Hendricks and Sergio Guadarrama
 
 }
 
-- @inproceedings{cvpr2015/Karpathy,
-
-  author    = {Andrej Karpathy, Li Fei-Fei},
-
-  title     = {Deep Visual-Semantic Alignments for Generating Image Descriptions},
-
-  booktitle = {CVPR},
-
-  year = {2015}
-
-}
 
 
-- @inproceedings{cvpr2015/Vinyals,
-
-  author    = {Oriol Vinyals, Alexander Toshev, Samy Bengio, Dumitru Erhan},
-
-  title     = {Show and Tell: A Neural Image Caption Generator},
-
-  booktitle = {CVPR},
-
-  year = {2015}
-
-}
 
 - @inproceedings{cvpr2015/Fang,
 
