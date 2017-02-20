@@ -245,13 +245,15 @@ section 3.6 talks about when reviwer net is the same as [icml2015/Xu]. The most 
 
 The author proposed three sementaic info:
 
-1. retrieve text from image. The text is used as guiding info
+1. retrieve text from image. Retrieval-based guidance: generate a sentence, then feed back as guidance.
 
-2. using sementic embedding representation (intermediate result of the first method)
+2. using sementic embedding representation (emb-gLSTM): word is represented by embedding, with lower dimension. Input is the intermediate result of the first method
 
-3. the whole image
+3. Image as guidance (img-gLSTM): using the whole image as guidance
 
-**conclusion**: the second method is the best.   
+
+
+**conclusion**: the second method is the best. Using image as the guidance is not the best result.  
 
 
 
@@ -576,78 +578,6 @@ improve encoder+attention+decoder framework
 
 10.别人还有哪些地方没做？要是我接着此方向继续做，哪些是在我所在工作条件下可以做的，哪些必须要做，哪些别人肯定比我做得更好更快？
 
-
-#Guiding the Long-Short Term Memory Model for Image Caption Generation
-###Xu Jia, Efstratios Gavves, Basura Fernando, Tinne Tuytelaars},
-####ICCV2015
-1.论文主要解决的问题是什么？
-extracting
-semantic information from the image and then use
-it to “guide” the decoder, keeping it “on track” by adding
-a positive bias to words that are semantically linked to the
-image content.
-2.主要问题
-
-	这个问题重要吗？为什么？
-	important. Because it is more general than attention map. Knowing how to process the semantic information of image can inspire me how
-	to generate extra attention map
-	我为什么要读这篇文献？ 
-	see above
-	是否有人做过？
-	yes, attention map is a special kind of semantic info.
-	自己会怎么设计方法来解决？
-	no idea.
-3.图表
-
-	3.A	通过图表，你会得到什么结论？
-	glsvm is a genral framework. It takes an extra input for input gate, input modulate gate, forget gate and output gate. 
-	3.B	图表说明什么问题？能否说明该问题?自己要得到这张图会用什么方法？作者用的是什么方法？
-	
-	3.C	你能够重新画出这张图，用自己的语言表达吗？
-	
-4.方法分析
-	
-	作者采用什么方法来解决这个问题？假设是什么？理论依据是什么？
-	Retrieval-based guidance: generate a sentence, then feed back as guidance.
-	Semantic embedding guidance (emb-gLSTM): word is represented by embedding, with lower dimension.
-	Image as guidance (img-gLSTM): using image as guidance. 
-	这些方法是否符合论证命题的需要？
-	
-	通过这个方法，你觉得大概能得到怎样的结果？
-	
-	是否有能得到更好结果的方法或更加简单的方法？
-	
-	他为什么这样设计试验？是怎么想到的？有什么创新？你为什么没有想到？
-	
-5.逻辑
-
-	5.A	这些设计能否满足需要？为什么？这种方法有什么缺陷或进一步需要阐明的地方? 结果分析统计方法有什么缺陷
-		img as guidance is not the best result.
-	5.B	这些试验是如何组织起来的，之间的逻辑关系是什么？每项试验都有什么意义？哪些是必要的？哪些是不必要的？ 
-		
-	5.C	如果是我得到这样的结果，我会得到什么结论？
-	
-6.结论
-	
-	6.A	文章的结论是什么？和你想的差异在哪里?
-	
-	6.B	结论可靠性如何？对原来的结论有什么支持或变化？ 你如何评价？
-	
-	6.C	讨论中是如何从已知的知识得到结论
-
-7.不足
-	
-	7.A	试验结果是否支持文章的结论 问题、设计、方法和讨论的逻辑关系是什么，作者是如何达到目的的？有哪些哲学思想和技巧？
-		
-	7.B	还有哪些不确定采用的是推测的地方？为什么不确定？我能否进一步确定？ 
-	
-	7.C	文章是如何描述结果、如何解析图表趋势，论据如何组合，如何表达自己的观点？
-	
-8.和同类文献，有什么共同点和不同点？
-
-9.和以前的文献，作者思路上有什么变化，下一步是什么？我能否有进一步改进或者加入？
-
-10.别人还有哪些地方没做？要是我接着此方向继续做，哪些是在我所在工作条件下可以做的，哪些必须要做，哪些别人肯定比我做得更好更快？
 
   
 
