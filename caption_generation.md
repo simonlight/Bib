@@ -41,9 +41,19 @@ Yuan	Liu,	Xue	Li	and	Zhongchao	Shi aaai17
 Reference	Based	LSTM	for	Image	Captioning
 Minghai	Chen,	Guiguang	Ding,	Sicheng	Zhao,	Hui	Chen,	Jungong	Han	and	Qiang	Liu aaai17
 
-Attention	Correctness:	Machine	Perception	vs	Human	Annotations	in	Neural	Image	
-Captioning
-Chenxi	Liu,	Junhua	Mao,	Fei	Sha	and	Alan	Yuille aaai17
+
+- @inproceedings{aaai2017/Mun,
+
+  author    = {Chenxi Liu and Junhua Mao and Fei Sha and Alan Yuille},
+  
+  title     = {Attention	Correctness:	Machine	Perception	vs	Human	Annotations	in	Neural	Image Captioning},
+  
+  booktitle = {AAAI},
+  
+  year = {2017}
+  
+}
+
 
 SPICE: Semantic Propositional Image Caption
 Evaluation eccv2016
